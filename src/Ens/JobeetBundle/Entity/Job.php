@@ -615,8 +615,8 @@ class Job
     }
 
     public function publish()
-{
-  $this->setIsActivated(true);
-}
+    {
+      $this->setIsActivated(true);
+    }
 
 }

@@ -17,7 +17,7 @@ ens_job_preview:
 ens_job_publish:
     pattern:  /{token}/publish
     defaults: { _controller: "EnsJobeetBundle:Job:publish" }
-    requirements: { _method: post }
+    methods: [POST]
 
 ens_job_new:
     path:     /new

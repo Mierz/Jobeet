@@ -28,8 +28,6 @@ class JobType extends AbstractType
             ->add('how_to_apply', null, array('label' => 'How to apply?'))            
             ->add('is_public', null, array('label' => 'Public?'))            
             ->add('email')
-            ->add('token')
-            
         ;
     }
     
