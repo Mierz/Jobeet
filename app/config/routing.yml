@@ -1,3 +1,20 @@
-ens_jobeet:
-    resource: "@EnsJobeetBundle/Resources/config/routing.yml"
-    #prefix:   /
+admin:
+    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
+    prefix: /admin
+ 
+_sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /admin
+
+mrz_jobeet:
+    resource: "@MrzJobeetBundle/Resources/config/routing.yml"
+    prefix:   /
+
+login:
+    path: /login
+    defaults: { _controller: MrzJobeetBundle:Default:login }
+login_check:
+    path: /login_check    
+logout:
+    pattern:   /logout
