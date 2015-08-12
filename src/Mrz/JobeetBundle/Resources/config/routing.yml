@@ -1,0 +1,11 @@
+mrz_jobeet_mrz_job:
+    resource: "@MrzJobeetBundle/Resources/config/routing/job.yml"
+    prefix:   /job
+
+mrz_jobeet_homepage:
+    path:     /
+    defaults: { _controller: MrzJobeetBundle:Job:index }
+
+mrz_jobeet_category:
+    path:     /category/{slug}/{page}
+    defaults: { _controller: MrzJobeetBundle:Category:show, page: 1 }

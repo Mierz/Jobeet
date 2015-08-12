@@ -1,0 +1,43 @@
+mrz_job:
+    path:     /
+    defaults: { _controller: "MrzJobeetBundle:Job:index" }
+
+mrz_job_show:
+    path:     /{company}/{location}/{id}/{position}
+    defaults: { _controller: "MrzJobeetBundle:Job:show" }
+    requirements:
+        id: \d+
+
+mrz_job_preview:
+    path:     /{company}/{location}/{id}/{positon}
+    defaults: { _controller: "MrzJobeetBundle:Job:preview" }
+    requirements:
+        token: \w+
+
+mrz_job_new:
+    path:     /new
+    defaults: { _controller: "MrzJobeetBundle:Job:new" }
+
+mrz_job_create:
+    path:     /create
+    defaults: { _controller: "MrzJobeetBundle:Job:create" }
+    methods:  POST
+
+mrz_job_edit:
+    path:     /{token}/edit
+    defaults: { _controller: "MrzJobeetBundle:Job:edit" }
+
+mrz_job_update:
+    path:     /{token}/update
+    defaults: { _controller: "MrzJobeetBundle:Job:update" }
+    methods:  [POST, PUT]
+
+mrz_job_delete:
+    path:     /{token}/delete
+    defaults: { _controller: "MrzJobeetBundle:Job:delete" }
+    methods:  [POST, DELETE]
+
+mrz_job_publish:
+    path:     /{token}/publish
+    defaults: { _controller: "MrzJobeetBundle:Job:publish" }
+    methods:  POST
